@@ -1,0 +1,15 @@
+CREATE DATABASE Tops;
+
+CREATE TABLE students(id int(200),name varchar(20),surname varchar(20),email varchar(100));
+
+insert into students VALUES(1,"Ekal","Sortahiya","ekal12"),(2,"YAsvi","Patel","yasvi11"),(3,"Chirag","Patel","Patel21");
+
+ALTER TABLE students modify id INT primary key AUTO_INCREMENT not null;
+
+alter table students add mobile bigint(10) not null;
+
+update students set mobile=659768 where name="Yasvi";
+
+alter table students drop mobile;
+
+DELETE FROM students where name="Chirag";
